@@ -1,0 +1,23 @@
+{
+  "name": "cooklens-types",
+  "version": "1.0.0",
+  "description": "Typescript shared interfaces for cooklens",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PepCarmona/cooklens-types.git"
+  },
+  "author": "PepCarmona",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PepCarmona/cooklens-types/issues"
+  },
+  "homepage": "https://github.com/PepCarmona/cooklens-types#readme",
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  }
+}
