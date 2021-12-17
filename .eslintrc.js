@@ -20,12 +20,5 @@ module.exports = {
 		'linebreak-style': ['warn', 'windows'],
 		quotes: ['warn', 'single'],
 		semi: ['warn', 'always'],
-		'prettier/prettier': [
-			'warn',
-			{
-				singleQuote: true,
-				tabWidth: 4,
-			},
-		],
 	},
 };
