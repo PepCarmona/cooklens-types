@@ -1,7 +1,5 @@
-const favoriteFruits: string[] = ['apple', 'strawberry', 'orange'];
-
-function addFruit(fruit: string) {
-	favoriteFruits.push(fruit);
-}
-
-addFruit('banana');
+export * from './CalendarTypes';
+export * from './MealPlanTypes';
+export * from './PaginationTypes';
+export * from './RecipeTypes';
+export * from './UserTypes';
