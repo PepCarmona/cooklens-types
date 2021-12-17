@@ -6,6 +6,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +20,9 @@
   },
   "homepage": "https://github.com/PepCarmona/cooklens-types#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "eslint": "^8.4.1",
     "typescript": "^4.5.4"
   }
 }
