@@ -51,6 +51,7 @@ export interface Recipe {
 	images?: string[];
 	rating: number;
 	author?: string | UserInfo;
+	isIntegrated?: boolean;
 }
 
 export class RecipeTimeClass implements RecipeTime {
