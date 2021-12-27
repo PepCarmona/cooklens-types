@@ -92,8 +92,8 @@ export class TagClass implements Tag {
 
 export class RecipeClass implements Recipe {
 	title: string;
-	description: string;
-	time: RecipeTime;
+	description?: string;
+	time?: RecipeTime;
 	servings: number;
 	ingredients: Ingredient[];
 	instructions: Step[];
@@ -101,8 +101,6 @@ export class RecipeClass implements Recipe {
 	rating: number;
 	constructor() {
 		this.title = '';
-		this.description = '';
-		this.time = new RecipeTimeClass();
 		this.servings = 4;
 		this.ingredients = [new IngredientClass()];
 		this.instructions = [new StepClass()];
