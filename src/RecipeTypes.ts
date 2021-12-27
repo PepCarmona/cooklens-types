@@ -43,7 +43,7 @@ export interface Recipe {
 	url?: string;
 	title: string;
 	description?: string;
-	time: RecipeTime;
+	time?: RecipeTime;
 	servings: number;
 	ingredients: Ingredient[];
 	instructions: Step[];
