@@ -44,7 +44,7 @@ export interface Recipe {
 	title: string;
 	description?: string;
 	time?: RecipeTime;
-	servings: number;
+	servings: string;
 	ingredients: Ingredient[];
 	instructions: Step[];
 	tags: Tag[];
@@ -94,14 +94,14 @@ export class RecipeClass implements Recipe {
 	title: string;
 	description?: string;
 	time?: RecipeTime;
-	servings: number;
+	servings: string;
 	ingredients: Ingredient[];
 	instructions: Step[];
 	tags: Tag[];
 	rating: number;
 	constructor() {
 		this.title = '';
-		this.servings = 4;
+		this.servings = '4';
 		this.ingredients = [new IngredientClass()];
 		this.instructions = [new StepClass()];
 		this.tags = [];
