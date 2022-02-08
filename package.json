@@ -1,40 +1,39 @@
 {
-  "name": "cooklens-types",
-  "version": "1.1.5",
-  "description": "Typescript shared interfaces for cooklens",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
-    "lint": "eslint --ignore-path .gitignore --ext .js,.ts .",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run lint",
-    "preversion": "npm run lint",
-    "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PepCarmona/cooklens-types.git"
-  },
-  "author": "PepCarmona",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/PepCarmona/cooklens-types/issues"
-  },
-  "homepage": "https://github.com/PepCarmona/cooklens-types#readme",
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.7.0",
-    "@typescript-eslint/parser": "^5.7.0",
-    "eslint": "^8.4.1",
-    "eslint-config-prettier": "^8.3.0",
-    "prettier": "^2.5.1",
-    "typescript": "^4.5.4"
-  }
+	"name": "cooklens-types",
+	"version": "1.1.5",
+	"description": "Typescript shared interfaces for cooklens",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc",
+		"dev": "tsc --watch",
+		"lint": "eslint --ignore-path .gitignore --ext .js,.ts .",
+		"format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"prepare": "npm run build",
+		"preversion": "npm run lint",
+		"version": "npm run format && git add -A src",
+		"postversion": "git push && git push --tags"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/PepCarmona/cooklens-types.git"
+	},
+	"author": "PepCarmona",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/PepCarmona/cooklens-types/issues"
+	},
+	"homepage": "https://github.com/PepCarmona/cooklens-types#readme",
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.7.0",
+		"@typescript-eslint/parser": "^5.7.0",
+		"eslint": "^8.4.1",
+		"eslint-config-prettier": "^8.3.0",
+		"prettier": "^2.5.1",
+		"typescript": "^4.5.4"
+	}
 }
