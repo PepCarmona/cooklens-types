@@ -1,4 +1,4 @@
 export interface PaginatedResponse {
-  result: unknown[];
-  next: boolean;
+	result: unknown[];
+	next: string;
 }
