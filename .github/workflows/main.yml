@@ -23,6 +23,7 @@ jobs:
         run: |
           version=$(eval npm show cooklens-types version)
           nextVersion=$(echo $version | awk -F. -v OFS=. '{$NF += 1 ; print}')
-          npm publish $nextVersion
+          npm version --commit-hooks false --git-tag-version false $nextVersion
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_KEY }}
