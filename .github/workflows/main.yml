@@ -1,4 +1,4 @@
-name: CD
+name: Publish to NPM
 
 on:
   push:
@@ -10,6 +10,22 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+          registry-url: 'https://registry.npmjs.org'
       
-      - run: npm publish
+      - name: Get current version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@master
+      
+      - name: Publish package on NPM 📦
+        run: |
+          $version=npm show cooklens-types version
+          echo $version
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_KEY }}
