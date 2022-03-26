@@ -18,14 +18,10 @@ jobs:
         with:
           node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
-      
-      - name: Get current version
-        id: package-version
-        uses: martinbeentjes/npm-get-version-action@master
-      
+    
       - name: Publish package on NPM 📦
         run: |
-          $version=npm show cooklens-types version
+          $version='npm show cooklens-types version'
           echo $version
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_KEY }}
