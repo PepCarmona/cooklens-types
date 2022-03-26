@@ -21,7 +21,7 @@ jobs:
     
       - name: Publish package on NPM 📦
         run: |
-          $version='npm show cooklens-types version'
+          version=$(eval npm show cooklens-types version)
           echo $version
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_KEY }}
