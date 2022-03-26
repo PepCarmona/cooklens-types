@@ -22,6 +22,7 @@ jobs:
       - name: Publish package on NPM 📦
         run: |
           version=$(eval npm show cooklens-types version)
-          echo $version
+          nextVersion=$(echo $version | awk -F. -v OFS=. '{$NF += 1 ; print}')
+          npm publish $nextVersion
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_KEY }}
