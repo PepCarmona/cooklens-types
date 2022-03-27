@@ -9,7 +9,7 @@ export interface SearchQuery {
 export type SearchType = 'title' | 'ingredient' | 'tag';
 
 export interface PaginatedRecipes extends PaginatedResponse {
-	result: Recipe[];
+	result: DatabaseRecipe[];
 }
 export interface IntegratedSite {
 	name: string;
@@ -38,7 +38,7 @@ export interface Tag {
 	_id?: string;
 	value: string;
 }
-export interface Recipe {
+interface BaseRecipe {
 	_id?: string;
 	url?: string;
 	title: string;
@@ -50,8 +50,20 @@ export interface Recipe {
 	tags: Tag[];
 	images?: string[];
 	rating: number;
-	author?: string | UserInfo;
 	isIntegrated?: boolean;
+}
+
+export interface DatabaseRecipe extends BaseRecipe {
+	author?: string;
+}
+
+export interface DatabaseRecipeWithPopulatedAuthor extends BaseRecipe {
+	author?: UserInfo;
+}
+
+export interface ClientRecipe extends BaseRecipe {
+	authorId?: string;
+	authorDetails?: UserInfo;
 }
 
 export class RecipeTimeClass implements RecipeTime {
@@ -90,7 +102,7 @@ export class TagClass implements Tag {
 	}
 }
 
-export class RecipeClass implements Recipe {
+export class RecipeClass implements BaseRecipe {
 	title: string;
 	description?: string;
 	time?: RecipeTime;
